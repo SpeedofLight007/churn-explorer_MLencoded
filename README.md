@@ -27,14 +27,13 @@ O coração da nossa análise é o dataset **Telco Customer Churn**, um conjunto
 * **Tamanho**: 7.043 amostras, com 1.869 casos de churn e 5.174 de não churn.
 * **Variável Alvo**: `Churn Label` (Sim/Não).
 
-### **Nossas Features Criadas (Engenharia de Atributos)**
+### **Categorias de Features Criadas (Engenharia de Atributos)**
 
-Para aprofundar a análise, criamos novas features que complementam os dados originais:
+Para aprofundar a análise, categorizamos as features com base nos motivos de churn, o que nos ajuda a entender as razões por trás da "despedida" do cliente.
 
-* **`EffectiveMonthlyCharge`**: Custo mensal real do cliente, considerando o total pago ao longo do tempo.
-* **`BillingDiscrepancy`**: A diferença entre a cobrança mensal atual e o `EffectiveMonthlyCharge`, indicando possíveis cobranças extras inesperadas.
-* **`HasUnexpectedExtraCharge`**: Um indicador binário que sinaliza se houve uma discrepância positiva na cobrança.
-* **`DiscrepancySeverity`**: A "gravidade" da discrepância de cobrança, ponderada pelo tempo de contrato, destacando seu impacto em clientes mais novos.
+* **Competidor**: Features relacionadas ao tipo de contrato, valor de cobranças mensais, tipo de serviço de internet e serviços extras podem indicar quão competitiva a oferta atual da empresa é em relação aos concorrentes.
+* **Atitude/Insatisfação**: Features como a pontuação de satisfação, o tipo de internet, suporte técnico, segurança online e backup podem ser relevantes para capturar a percepção do cliente sobre o serviço.
+* **Preço**: A Cobrança Mensal (`Monthly Charge`), Cobrança Total (`Total Charges`) e cobranças extras (`Total Extra Data Charges`) estão diretamente relacionadas a preocupações com o preço.
 
 ### **🧠 Como Nosso "Detetive de Churn" Funciona (Metodologia)**
 
